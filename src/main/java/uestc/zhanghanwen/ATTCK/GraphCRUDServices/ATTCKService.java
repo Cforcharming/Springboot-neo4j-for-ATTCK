@@ -55,6 +55,7 @@ public abstract class ATTCKService<GN extends GraphNode, NR extends NodeReposito
      * @throws Exception if {@link NodeRepository#save} fails or the mitre id of the saved node is not matched
      * as the expected input, then rollback.
      */
+    @SuppressWarnings("RedundantThrows")
     protected ResultWrapper save(JSONObject node) throws Exception {
         
         @SuppressWarnings("unchecked")

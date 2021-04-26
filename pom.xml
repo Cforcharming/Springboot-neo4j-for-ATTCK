@@ -24,15 +24,15 @@
         <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.neo4j</groupId>
-            <artifactId>neo4j-ogm-http-driver</artifactId>
-            <version>3.2.21</version>
+            <artifactId>neo4j-ogm-bolt-driver</artifactId>
+            <version>3.2.20</version>
         </dependency>
         <dependency>
             <groupId>org.neo4j</groupId>
@@ -66,7 +66,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.18</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

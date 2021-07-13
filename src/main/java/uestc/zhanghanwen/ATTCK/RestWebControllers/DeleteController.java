@@ -3,10 +3,7 @@ package uestc.zhanghanwen.ATTCK.RestWebControllers;
 import uestc.zhanghanwen.ATTCK.GraphCRUDServices.DeleteServices.DeleteServiceBundle;
 import uestc.zhanghanwen.ATTCK.Wrappers.ResponseWrapper;
 import uestc.zhanghanwen.ATTCK.Wrappers.QueryWrapper;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.jetbrains.annotations.Contract;
 import lombok.Data;
 
@@ -21,7 +18,9 @@ import lombok.Data;
  */
 @Data
 @RestController
-@RequestMapping(value = "/delete")
+@CrossOrigin(origins = "*")
+@RequestMapping(value = "/delete", method = {RequestMethod.GET, RequestMethod.POST},
+        produces="application/json;charset=UTF-8")
 public class DeleteController {
 
     DeleteServiceBundle service;
@@ -37,7 +36,7 @@ public class DeleteController {
      * @param id the object id to delete
      * @return true or false
      */
-    @RequestMapping(value = "/node", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/node")
     public String deleteObjectAndRelationship(@RequestParam(value = "id") String id) {
 
         if (id == null) {
@@ -58,7 +57,7 @@ public class DeleteController {
      * @param endNodeMitreId the object id to delete
      * @return true or false
      */
-    @RequestMapping(value = "/relationship", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/relationship")
     public String deleteRelationship(
             @RequestParam(value = "start_id") String startNodeMitreId,
             @RequestParam(value = "end_id") String endNodeMitreId

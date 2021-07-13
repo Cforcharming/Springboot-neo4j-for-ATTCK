@@ -1,9 +1,9 @@
 package uestc.zhanghanwen.ATTCK.RestWebControllers;
 
 import uestc.zhanghanwen.ATTCK.GraphCRUDServices.RetrieveServices.RetrieveServiceBundle;
-import uestc.zhanghanwen.ATTCK.POJOs.GraphNode;
 import uestc.zhanghanwen.ATTCK.Wrappers.ResponseWrapper;
 import uestc.zhanghanwen.ATTCK.Wrappers.QueryWrapper;
+import uestc.zhanghanwen.ATTCK.POJOs.GraphNode;
 import org.springframework.web.bind.annotation.*;
 import org.jetbrains.annotations.Contract;
 import lombok.Data;
@@ -19,7 +19,9 @@ import lombok.Data;
  */
 @Data
 @RestController
-@RequestMapping(value = "/query")
+@CrossOrigin(origins = "*")
+@RequestMapping(value = "/query", method = {RequestMethod.GET, RequestMethod.POST},
+        produces="application/json;charset=UTF-8")
 public class RetrieveController {
     
     /**
@@ -44,7 +46,7 @@ public class RetrieveController {
      * @param id the mitre id to be queried.
      * @return the mitre object in JSON format.
      */
-    @RequestMapping(value = "", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "")
     public String queryObject(
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String id
@@ -75,7 +77,7 @@ public class RetrieveController {
      * @param id the mitre_id of the object to be queried.
      * @return the mitre object in JSON format.
      */
-    @RequestMapping(value = "/{id}", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/{id}")
     public String queryObjectByMitreId(@PathVariable String id) {
 
         QueryWrapper query = new QueryWrapper();
@@ -100,7 +102,7 @@ public class RetrieveController {
      * @param size the size of one page, default 20.
      * @return the mitre object in JSON format.
      */
-    @RequestMapping(value = "/type/{type}", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/type/{type}")
     public String queryType(@PathVariable String type,
                             @RequestParam(value = "get_all", defaultValue = "false", required = false) boolean isGetAll,
                             @RequestParam(defaultValue = "0", required = false) int page,
@@ -142,7 +144,7 @@ public class RetrieveController {
      * @param id the mitre_id of the object to be queried.x
      * @return the mitre object in JSON format.
      */
-    @RequestMapping(value = "{id}/related", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "{id}/related")
     public String queryRelatedByStartNodeMitreId(@PathVariable String id) {
 
         if (id == null) {
@@ -167,7 +169,7 @@ public class RetrieveController {
      * @param endNodeMitreId the mitre id of the end node.
      * @return the relationship name
      */
-    @RequestMapping(value = "/related", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/related")
     public String queryRelationshipByStartAndEndNodeMitreId(@RequestParam(value = "start_id") String startNodeMitreId,
                                                             @RequestParam(value = "end_id") String endNodeMitreId) {
         

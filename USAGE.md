@@ -60,42 +60,42 @@
    Cookies = []
 
    #### 案例2
-   >MockHttpServletRequest:
-   HTTP Method = GET
-   Request URI = /query
-   Parameters = {id=[MT0001]}
-   Headers = []
-   Body = null
-   Session Attrs = {}
+   >MockHttpServletRequest:  
+   HTTP Method = GET  
+   Request URI = /query  
+   Parameters = {id=[MT0001]}  
+   Headers = []  
+   Body = null  
+   Session Attrs = {}  
    >
-   >Handler:
-   Type = uestc.zhanghanwen.ATTCK.RestWebControllers.RetrieveController
-   Method = uestc.zhanghanwen.ATTCK.RestWebControllers.RetrieveController#queryObject(String, String)
+   >Handler:  
+   Type = uestc.zhanghanwen.ATTCK.RestWebControllers.RetrieveController  
+   Method = uestc.zhanghanwen.ATTCK.RestWebControllers.RetrieveController#queryObject(String, String)  
    >
-   >Async:
-   Async started = false
-   Async result = null
+   >Async:  
+   Async started = false  
+   Async result = null  
    >
-   >Resolved Exception:
-   Type = null
+   >Resolved Exception:  
+   Type = null  
    >
-   >ModelAndView:
-   View name = null
-   View = null
-   Model = null
+   >ModelAndView:  
+   View name = null  
+   View = null  
+   Model = null  
    >
-   >FlashMap:
-   Attributes = null
+   >FlashMap:  
+   Attributes = null  
    >
-   >MockHttpServletResponse:
-   Status = 200
-   Error message = null
-   Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"81"]
-   Content type = text/plain;charset=UTF-8
-   Body = {"status":0,"result":[{"mitre_id":"MT0001","name":"pre"}],"msg":"OK","detail":""}
-   Forwarded URL = null
-   Redirected URL = null
-   Cookies = []
+   >MockHttpServletResponse:  
+   Status = 200  
+   Error message = null  
+   Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"81"]  
+   Content type = text/plain;charset=UTF-8  
+   Body = {"status":0,"result":[{"mitre_id":"MT0001","name":"pre"}],"msg":"OK","detail":""}  
+   Forwarded URL = null  
+   Redirected URL = null  
+   Cookies = []  
 
 
 2. REST URL 查询 ID

@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact build-on-make="true" name="ATTCK:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/ATTCK_jar</output-path>
-    <root id="root">
+  <artifact type="jar" build-on-make="true" name="ATTCK">
+    <output-path>$PROJECT_DIR$/out/artifacts/ATTCK</output-path>
+    <root id="archive" name="ATTCK.jar">
       <element id="archive" name="ATTCK.jar">
         <element id="module-output" name="ATTCK" />
       </element>

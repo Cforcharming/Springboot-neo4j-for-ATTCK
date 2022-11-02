@@ -36,7 +36,7 @@ abstract class RetrieveServiceImplement<GN extends GraphNode, NR extends NodeRep
     }
     
     /**
-     * Get the node by it's name.
+     * Get the node by its name.
      *
      * @throws Exception if {@link NodeRepository#findByName} fails
      * @param name name

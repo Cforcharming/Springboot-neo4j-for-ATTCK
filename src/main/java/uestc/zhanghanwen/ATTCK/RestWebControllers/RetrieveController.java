@@ -96,7 +96,7 @@ public class RetrieveController {
      * {@code get_all} is default {@code false} and will get a page of 20 records each time. <br>
      * When {@code get_all} is {@code false} and {@code page} is not specified, the default page is 0.
      *
-     * @param isGetAll whether get all objects or only one page, default false.
+     * @param isGetAll whether getting all objects or only one page, default false.
      * @param type the mitre_id of the object to be queried.
      * @param page the page number to get, default 0.
      * @param size the size of one page, default 20.

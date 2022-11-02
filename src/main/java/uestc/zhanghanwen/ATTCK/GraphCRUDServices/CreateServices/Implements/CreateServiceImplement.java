@@ -74,7 +74,7 @@ abstract class CreateServiceImplement<GN extends GraphNode, NR extends NodeRepos
                 
             default:
                 result = new ResultWrapper(ResultWrapper.REQUEST_ERROR);
-                result.setMsgSpec("Unable to create relationship, because cannot found a relationship of type "
+                result.setMsgSpec("Unable to create relationship, because cannot find a relationship of type "
                         + relationship);
                 return result;
         }

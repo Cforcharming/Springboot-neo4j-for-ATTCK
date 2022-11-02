@@ -51,7 +51,7 @@ public class DeleteController {
     }
 
     /**
-     * delete the bi-directional relationship between two nodes
+     * delete the bidirectional relationship between two nodes
      *
      * @param startNodeMitreId the object id to delete
      * @param endNodeMitreId the object id to delete

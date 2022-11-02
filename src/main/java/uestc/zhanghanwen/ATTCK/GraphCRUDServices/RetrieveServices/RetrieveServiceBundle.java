@@ -52,7 +52,7 @@ public class RetrieveServiceBundle extends ServiceBundle {
     }
     
     /**
-     * Get the node by it's mitre id.
+     * Get the node by its mitre id.
      *
      * @param query the {@link QueryWrapper} of wrapped query of mitre id.
      * @return {@link ResponseWrapper} wrapped response
@@ -74,7 +74,7 @@ public class RetrieveServiceBundle extends ServiceBundle {
     }
     
     /**
-     * Get the node by it's name.
+     * Get the node by its name.
      *
      * @param query the {@link QueryWrapper} of wrapped query of name.
      * @return {@link ResponseWrapper} wrapped response

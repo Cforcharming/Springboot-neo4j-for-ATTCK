@@ -14,7 +14,7 @@ import uestc.zhanghanwen.ATTCK.Wrappers.ResultWrapper;
 public interface RetrieveService {
     
     /**
-     * Get the node by it's mitre id.
+     * Get the node by its mitre id.
      *
      * @throws Exception if {@link uestc.zhanghanwen.ATTCK.Repositories.NodeRepository#findByMitreId} fails
      * @param mitreId mitre id
@@ -23,7 +23,7 @@ public interface RetrieveService {
     ResultWrapper findByMitreId(String mitreId) throws Exception;
     
     /**
-     * Get the node by it's name.
+     * Get the node by its name.
      *
      * @throws Exception if {@link uestc.zhanghanwen.ATTCK.Repositories.NodeRepository#findByName} fails
      * @param name name

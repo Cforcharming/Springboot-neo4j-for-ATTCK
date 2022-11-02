@@ -15,7 +15,7 @@ import lombok.Data;
  * {@link RetrieveController#queryObjectByMitreId} and {@link RetrieveController#queryRelatedByStartNodeMitreId}.
  *
  * @author zhanghanwen
- * @version 1.0
+ * @version 1.0.1
  */
 @Data
 @RestController

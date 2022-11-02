@@ -54,14 +54,13 @@ abstract class RetrieveServiceImplement<GN extends GraphNode, NR extends NodeRep
      * Get all nodes by type, with page and size specified.<br>
      * if page is -1, then return all results.
      *
-     * @throws Exception if {@link NodeRepository#findAll} fails
      * @param type the specified type.
      * @param page page, start from 0.
      * @param size size, how many records in one page.
      * @return {@link ResultWrapper} of all queried results.
      */
     @Override
-    public ResultWrapper findAll(String type, int page, int size) throws Exception {
+    public ResultWrapper findAll(String type, int page, int size) {
 
         List<GN> list;
         if (page != -1) {
@@ -73,7 +72,7 @@ abstract class RetrieveServiceImplement<GN extends GraphNode, NR extends NodeRep
                     )
             ).toList();
         } else {
-            list = (List<GN>) this.getRepo().findAll();
+            list = this.getRepo().findAll();
         }
     
         return ResultWrapper.resultFromList(list);

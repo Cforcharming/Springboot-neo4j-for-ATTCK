@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.neo4j:neo4j-ogm-core:3.2.37">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.37/neo4j-ogm-core-3.2.37.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.37/neo4j-ogm-core-3.2.37-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.37/neo4j-ogm-core-3.2.37-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

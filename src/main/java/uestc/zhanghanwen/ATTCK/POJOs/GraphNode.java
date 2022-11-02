@@ -4,9 +4,9 @@ import org.neo4j.ogm.annotation.Property;
 import org.neo4j.ogm.annotation.Id;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.JSON;
-import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
+import java.util.Objects;
 import lombok.NoArgsConstructor;
 import lombok.Data;
 
@@ -100,27 +100,21 @@ public abstract class GraphNode {
         return JSON.toJSONString(this);
     }
     
-    /**
-     * Determines if two mitre objects are equal.<br>
-     * Since the mitre id is the key in database, it only compares if the {@link GraphNode#mitreId} is the same.
-     *
-     * @param obj another {@link GraphNode} to be compared.
-     * @return {@code true} if the {@link GraphNode#mitreId} is the same, {@code false} otherwise.
-     */
     @Override
-    @Contract(pure = true)
-    public boolean equals(@NotNull Object obj) {
-        if (obj.getClass() == this.getClass()) {
-            if (this.getMitreId() != null && ((GraphNode) obj).getMitreId() != null) {
-                return this.getMitreId().equals(((GraphNode) obj).getMitreId());
-            }
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
         }
-        return false;
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GraphNode graphNode = (GraphNode) o;
+        return mitreId.equals(graphNode.mitreId);
     }
     
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(mitreId);
     }
     
     /**

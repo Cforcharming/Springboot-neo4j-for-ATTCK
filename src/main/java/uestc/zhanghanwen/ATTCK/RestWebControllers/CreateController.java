@@ -16,7 +16,7 @@ import lombok.Data;
  * The services are {@link CreateController#createNode} and {@link CreateController#createRelationship}.
  *
  * @author zhanghanwen
- * @version 1.0
+ * @version 1.0.1
  */
 @Data
 @RestController

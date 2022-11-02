@@ -16,7 +16,7 @@ import lombok.Data;
  * The services are {@link UpdateController#updateNode}.
  *
  * @author zhanghanwen
- * @version 1.0
+ * @version 1.0.1
  */
 @Data
 @RestController

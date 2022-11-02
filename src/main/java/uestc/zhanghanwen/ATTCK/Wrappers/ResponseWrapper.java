@@ -128,7 +128,7 @@ public class ResponseWrapper {
     }
 
     /**
-     * Add all results from a {@link JSONArray} in a {@link ResultWrapper} into it's own {@link ResponseWrapper#result}
+     * Add all results from a {@link JSONArray} in a {@link ResultWrapper} into its own {@link ResponseWrapper#result}
      *
      * @param result the {@link ResultWrapper} of a query.
      */

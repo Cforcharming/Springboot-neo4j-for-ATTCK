@@ -2,14 +2,14 @@ package uestc.zhanghanwen.ATTCK.Repositories;
 
 import uestc.zhanghanwen.ATTCK.POJOs.GraphNode;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
-import org.springframework.data.neo4j.annotation.Query;
+import org.springframework.data.neo4j.repository.query.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
  * The {@link Neo4jRepository} interface of cypher queries.<br>
- * For different types of node, each one can inherit to create it's own repository.
+ * For different types of node, each one can inherit to create its own repository.
  *
  * @see Neo4jRepository
  * @see GraphNode

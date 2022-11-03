@@ -3,15 +3,10 @@
 ### 本项目是ATT&CK攻防知识图谱数据库的增删改查后端接口，知识图谱存储于neo4j数据库中。
 
 ##1. 开发基本信息
-本项目采用`Java 11`作为开发语言，使用`SpringBoot`作为后端基本框架，使用`Spring Data neo4j`作为数据库层。
-此框架具有轻量、开发便捷、耦合度低等特点。
 
-* JDK版本：`OpenJDK 11.0.10`
-* 项目构建：`Apache Maven 3.8.1`
-* 版本控制：`git 2.31.1`
-* 开发环境：`macOS 11.2.3`
-* 测试环境：`Ubuntu Linux 20.04 LTS`
-* 使用IDE：`JetBrains Intellij IDEA Ultimate 2021.1`
+* JDK 17
+* SpringBoot 2.7
+
 
 ## 2. 项目概况
 

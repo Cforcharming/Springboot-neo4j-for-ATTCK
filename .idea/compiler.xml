@@ -13,7 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ATTCK" target="11.0.10" />
+      <module name="ATTCK" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

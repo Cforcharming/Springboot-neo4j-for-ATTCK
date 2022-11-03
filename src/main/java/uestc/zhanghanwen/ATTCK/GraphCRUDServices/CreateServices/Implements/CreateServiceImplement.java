@@ -56,23 +56,11 @@ abstract class CreateServiceImplement<GN extends GraphNode, NR extends NodeRepos
         ResultWrapper result;
     
         switch (relationship) {
-            case "contains":
-                this.getRepo().createContainsRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
-                break;
-                
-            case "in":
-                this.getRepo().createInRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
-                break;
-                
-            case "uses":
-                this.getRepo().createUsesRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
-                break;
-                
-            case "is used by":
-                this.getRepo().createUsedByRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
-                break;
-                
-            default:
+            case "contains" -> this.getRepo().createContainsRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
+            case "in" -> this.getRepo().createInRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
+            case "uses" -> this.getRepo().createUsesRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
+            case "is used by" -> this.getRepo().createUsedByRelationshipByMitreId(startNodeMitreId, endNodeMitreId);
+            default -> {
                 result = new ResultWrapper(ResultWrapper.REQUEST_ERROR);
                 result.setMsgSpec("Unable to create relationship, because cannot find a relationship of type "
                         + relationship);

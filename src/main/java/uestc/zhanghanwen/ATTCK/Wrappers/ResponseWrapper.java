@@ -135,38 +135,24 @@ public class ResponseWrapper {
     public void addAll(ResultWrapper result) {
     
         switch (result.getStatusCode()) {
-            
-            case ResultWrapper.OK:
-            
+            case ResultWrapper.OK -> {
                 if (this.status == ResponseWrapper.OK || this.status == NO_RECORD) {
                     this.getResult().addAll(result.getResult());
                     this.setStatus(ResponseWrapper.OK, result.getMsgSpec());
                 }
-                break;
-                
-            case ResultWrapper.NO_RECORD:
-            
+            }
+            case ResultWrapper.NO_RECORD -> {
                 if (this.status == ResponseWrapper.NO_RECORD) {
                     this.setDetail(result.getMsgSpec());
                 }
-                break;
-                
-            case ResultWrapper.FAILED:
-            
-                this.setStatus(ResponseWrapper.INTERNAL_ERROR, result.getMsgSpec());
-                break;
-                
-            case ResultWrapper.ALREADY_EXIST:
-            
+            }
+            case ResultWrapper.FAILED -> this.setStatus(ResponseWrapper.INTERNAL_ERROR, result.getMsgSpec());
+            case ResultWrapper.ALREADY_EXIST -> {
                 if (this.status == ResponseWrapper.NO_RECORD) {
                     this.setStatus(ResponseWrapper.ALREADY_EXIST, result.getMsgSpec());
                 }
-                break;
-                
-            case ResultWrapper.REQUEST_ERROR:
-            
-                this.setStatus(ResponseWrapper.REQUEST_ERROR, result.getMsgSpec());
-                break;
+            }
+            case ResultWrapper.REQUEST_ERROR -> this.setStatus(ResponseWrapper.REQUEST_ERROR, result.getMsgSpec());
         }
         
     }
